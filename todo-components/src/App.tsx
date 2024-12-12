@@ -3,7 +3,6 @@ import "./App.css"
 import Input from "./components/Input"
 import List from "./components/List"
 import { DevCycleProvider, isDevCycleReady } from "./components/DevCycleContext"
-import process from "process"
 
 function App() {
   const [inputValue, setInputValue] = useState("")
@@ -28,7 +27,7 @@ function App() {
 
 // Export both the wrapped and unwrapped versions
 export const WrappedApp = () => (
-  <DevCycleProvider sdkKey={process.env.DEVCYCLE_SDK_KEY as string}>
+  <DevCycleProvider sdkKey={"DEVCYCLE_SDK_KEY"}>
     <App />
   </DevCycleProvider>
 )

@@ -6,7 +6,6 @@ import {
   DevCycleProvider,
   isDevCycleReady,
 } from "todo_components/DevCycleContext"
-import process from "process"
 
 function AppContent() {
   const devCycleReady = isDevCycleReady()
@@ -31,7 +30,7 @@ function AppContent() {
 
 function App() {
   return (
-    <DevCycleProvider sdkKey={process.env.DEVCYLE_SDK_KEY}>
+    <DevCycleProvider sdkKey={"DEVCYLE_SDK_KEY"}>
       <AppContent />
     </DevCycleProvider>
   )
